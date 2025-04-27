@@ -16,3 +16,4 @@ function stickyHeader() {
     navbar.classList.remove("scrolled");
   }
 }
+
