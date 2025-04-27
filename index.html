@@ -13,19 +13,35 @@
   <!-- Sticky Navbar -->
   <nav class="sticky-header" id="navbar" data-aos="fade-down">
     <div class="navbar flex justify-between items-center px-4">
-      
       <!-- Navbar Links -->
-      <div class="flex space-x-6 text-lg text-white">
+      <div class="flex items-center space-x-6 text-lg text-white">
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#especializacao">Especialização</a>
         <a href="#projetos">Projetos</a>
         <a href="#contact-section">Contato</a>
       </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="lg:hidden flex items-center" id="hamburger-menu">
+        <button id="mobile-menu-button" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+
       <!-- Botão de alternância de tema -->
       <button id="theme-toggle" class="theme-toggle-btn">
         <span id="theme-icon" class="text-3xl">🌙</span>
       </button>
+    </div>
+
+    <!-- Menu Responsivo -->
+    <div id="mobile-menu" class="lg:hidden flex flex-col items-center space-y-4 mt-4 hidden">
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#especializacao">Especialização</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contact-section">Contato</a>
     </div>
   </nav>
 
@@ -49,7 +65,7 @@
         <h3 class="text-3xl mb-4">Front-end</h3>
         <ul class="list-disc list-inside text-gray-300 space-y-2">
           <li>HTML5, CSS3, JavaScript</li>
-          <li>React.js, Next.js, SQL, Nodejs</li>
+          <li>React.js, Next.js, Nodejs</li>
           <li>Tailwind CSS, Sass</li>
         </ul>
       </div>
@@ -132,6 +148,13 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+    
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
   </script>
   <script src="script.js"></script>
 </body>

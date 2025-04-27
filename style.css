@@ -241,7 +241,6 @@ border: none;
 cursor: pointer;
 font-size: 2rem;
 transition: transform 0.3s ease;
-margin-left: 40px;
 }
 
 .theme-toggle-btn:hover {
@@ -264,4 +263,50 @@ animation: float 6s ease-in-out infinite;
 50% {
   transform: translateY(-15px);
 }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Hide default navbar on small screens */
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .navbar.open {
+    display: flex; /* Show navbar when it's opened */
+  }
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer .social-icons a {
+    font-size: 28px;
+  }
+}
+
+/* Ajustes para telas muito pequenas (Celulares) */
+@media (max-width: 480px) {
+  .footer-rights {
+    font-size: 12px;
+    padding: 15px 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
 }
